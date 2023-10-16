@@ -267,124 +267,94 @@ _{Explain here how the data archiving feature will be implemented}_
 
 ### Product scope
 
-**Target user profile**: National University of Singapore, School of Computing, Year 2 students.
+**Target user profile**: Volunteers at animal shelters.
 
-**Value proposition**: Our app aims to provide a platform for students to store work/school-related contacts. It will elevate user experience through organized contact categorization and task tagging.
-
+**Value proposition**: Our application aims to provide a centralized platform to ensure efficient storage and access to critical details, enhancing the volunteer experience in animal shelters.
 
 
 ### User stories
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
-| **As a...**                             | **I want to...**                               | **So that I can...**            |
-|-----------------------------------------|------------------------------------------------|---------------------------------|
-| student                                 | Edit existing contact information.             | Keep it up-to-date.             |
-| student                                 | View a list of all my contacts in one place.   | Easily access my contacts.      |
-| student                                 | Create a new contact entry quickly and easily. | Save time when adding contacts. |
-| student                                 | Delete existing contacts.                      | Remove unwanted contacts.       |
-| student                                 | Add tasks related to a contact/group.          | Manage tasks efficiently.       |
+| **Priority** | **As a...**          | **I want to...**                          | **So that I can...**                  |
+|--------------|----------------------|-------------------------------------------|---------------------------------------|
+| `***`        | new volunteer        | view specific information about each pet. | understand their unique needs.        |
+| `***`        | new volunteer        | be able to access a user manual.          | easily learn how to navigate the app. |
+| `***`        | volunteer            | view all animals in a single page.        | -                                     |
+| `***`        | authorized volunteer | add new animal entries                    | -                                     |
+| `***`        | authorized volunteer | update existing animal profiles           | -                                     |
+
 
 ### Use cases
 
-(For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified
+(For all use cases below, the **System** is the `AnimalCatalog` and the **Actor** is the `user`, unless specified
 otherwise)
 
 ---
 
-**Use case: Add a person**
+**Use Case: UC01 - Add Animal**
 
-**MSS**
-
-1. User requests to add a person with specific parameters.
-2. AddressBook verifies that the name parameter is not null.
-3. AddressBook verifies that the phone number contains 8 digits.
-4. AddressBook verifies if the group is already created.
-5. AddressBook verifies if the accessibility is either public or private. If not specified, sets it to public.
-6. AddressBook adds the contact to the address book.
-7. AddressBook displays a success message indicating that the contact was added.
-
+**MSS:**
+1. User chooses to add an animal.
+2. AnimalCatalog prompts for the animal details.
+3. User provides the necessary animal details.
+4. AnimalCatalog validates the details.
+5. AnimalCatalog adds the pet to the shelter database and displays the success message.
    Use case ends.
 
-**Extensions**
-
-* 2a. The name is missing:
-    * 2a1. AddressBook displays an error message: "Please input a name."
-      Use case ends.
+**Extensions:**
+3a. AnimalCatalog detects that the name is null.
+3a1. AnimalCatalog displays the failure message: "Please input an animal name".
+Use case resumes from step 2.
 
 ---
 
-**Use case: List persons**
+**Use Case: UC02 - List Animals**
 
-**MSS**
-
-1. User requests to list persons.
-2. AddressBook displays a list of all contacts in the address book.
-
-   Use case ends.
-
-**Extensions**
-
-* 2a. The list is empty:
-    * 2a1. AddressBook displays a message indicating that the list is empty.
-      Use case ends.
-
----
-
-**Use case: Edit a person**
-
-**MSS**
-
-1. User requests to edit a person using the edit command with the necessary parameters.
-2. AddressBook updates the specified contact with the new details.
-3. AddressBook displays a success message indicating that the contact was successfully updated.
-
+**MSS:**
+1. User chooses to list all animals.
+2. AnimalCatalog retrieves all animals from the shelter database.
+3. AnimalCatalog displays the list of all animals.
    Use case ends.
 
 ---
 
-**Use case: Delete a person**
+**Use Case: UC03 - Edit Animal**
 
-**MSS**
-
-1. User requests to list persons.
-2. AddressBook displays a list of persons.
-3. User requests to delete a specific person in the list.
-4. AddressBook deletes the person.
-
+**MSS:**
+1. User chooses to edit an animal's details.
+2. AnimalCatalog prompts for the index of the animal to be edited.
+3. User provides the index and the updated details.
+4. AnimalCatalog validates the details and the index.
+5. AnimalCatalog updates the animal details and displays the success message.
    Use case ends.
 
-**Extensions**
-
-* 2a. The list is empty:
-  Use case ends.
-
-* 3a. The given index is invalid:
-    * 3a1. AddressBook displays an error message.
-      Use case resumes at step 2.
+**Extensions:**
+3a. AnimalCatalog detects that the given index is out of range.
+3a1. AnimalCatalog displays a failure message indicating an invalid index.
+Use case resumes from step 2.
 
 ---
 
-**Use case: Add a task**
+**Use Case: UC04 - Delete Animal**
 
-**MSS**
-
-1. User requests to add a task with description and deadline related to specific contacts or groups.
-2. AddressBook adds the task.
-3. AddressBook displays a success message indicating that the task was added.
-
+**MSS:**
+1. User chooses to delete an animal.
+2. AnimalCatalog prompts for the index of the animal to be deleted.
+3. User provides the index.
+4. AnimalCatalog validates the index.
+5. AnimalCatalog deletes the animal and displays the success message.
    Use case ends.
 
----
+**Extensions:**
+3a. AnimalCatalog detects that the given index is out of range.
+3a1. AnimalCatalog displays a failure message indicating an invalid index.
+Use case resumes from step 2.
 
-**Use case: Exit the program**
-
-**MSS**
-
-1. User requests to exit the program.
-2. AddressBook terminates the application.
-
-   Use case ends.
+*a. At any time, User chooses to cancel the deletion.
+*a1. AnimalCatalog requests to confirm the cancellation.
+*a2. User confirms the cancellation.
+Use case ends.
 
 ---
 
@@ -400,6 +370,7 @@ otherwise)
 ### Glossary
 
 * **Mainstream OS**: Windows, Linux, Unix, OS-X
+* **Authorized volunteers**: Experienced volunteers who have been given a passcode to access limited features of the app.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -428,23 +399,6 @@ testers are expected to do more *exploratory* testing.
 
    1. Re-launch the app by double-clicking the jar file.<br>
        Expected: The most recent window size and location is retained.
-
-1. _{ more test cases …​ }_
-
-### Deleting a person
-
-1. Deleting a person while all persons are being shown
-
-   1. Prerequisites: List all persons using the `list` command. Multiple persons in the list.
-
-   1. Test case: `delete 1`<br>
-      Expected: First contact is deleted from the list. Details of the deleted contact shown in the status message. Timestamp in the status bar is updated.
-
-   1. Test case: `delete 0`<br>
-      Expected: No person is deleted. Error details shown in the status message. Status bar remains the same.
-
-   1. Other incorrect delete commands to try: `delete`, `delete x`, `...` (where x is larger than the list size)<br>
-      Expected: Similar to previous.
 
 1. _{ more test cases …​ }_
 
