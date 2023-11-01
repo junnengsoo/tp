@@ -7,11 +7,11 @@
       "headings": {
         "about-us": "About Us",
         "project-team": "Project team",
-        "john-doe": "John Doe",
-        "jane-doe": "Jane Doe",
-        "johnny-doe": "Johnny Doe",
-        "jean-doe": "Jean Doe",
-        "james-doe": "James Doe"
+        "loysius-lam": "Loysius Lam",
+        "jason-baek": "Jason Baek",
+        "chang-xian": "Chang Xian",
+        "ja-yee": "Ja Yee",
+        "jun-neng": "Jun Neng"
       },
       "headingKeywords": {}
     },
@@ -52,6 +52,15 @@
         "common-classes": "Common classes",
         "implementation": "Implementation",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
+        "addanimalcommand-implementation": "AddAnimalCommand Implementation",
+        "proposed-implementation-2": "Proposed Implementation",
+        "design-considerations-2": "Design considerations:",
+        "deleteanimalcommand-implementation": "DeleteAnimalCommand Implementation",
+        "proposed-implementation-3": "Proposed Implementation",
+        "design-considerations-3": "Design considerations:",
+        "listanimalcommand-implementation": "ListAnimalCommand Implementation",
+        "proposed-implementation-4": "Proposed Implementation",
+        "design-considerations-4": "Design considerations:",
         "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
@@ -62,7 +71,6 @@
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
-        "deleting-a-person": "Deleting a person",
         "saving-data": "Saving data"
       },
       "headingKeywords": {}
@@ -107,20 +115,10 @@
       "src": "UserGuide.md",
       "title": "User Guide",
       "headings": {
-        "ab-3-user-guide": "AB-3 User Guide",
+        "pawfection-user-guide": "PawFection User Guide",
         "quick-start": "Quick start",
         "features": "Features",
-        "viewing-help-help": "Viewing help : help",
-        "adding-a-person-add": "Adding a person: add",
-        "listing-all-persons-list": "Listing all persons : list",
-        "editing-a-person-edit": "Editing a person : edit",
-        "locating-persons-by-name-find": "Locating persons by name: find",
-        "deleting-a-person-delete": "Deleting a person : delete",
-        "clearing-all-entries-clear": "Clearing all entries : clear",
-        "exiting-the-program-exit": "Exiting the program : exit",
-        "saving-the-data": "Saving the data",
-        "editing-the-data-file": "Editing the data file",
-        "archiving-data-files-coming-in-v2-0": "Archiving data files [coming in v2.0]",
+        "entry-management": "Entry Management",
         "faq": "FAQ",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
@@ -136,10 +134,42 @@
       "headingKeywords": {}
     },
     {
-      "src": "team/johndoe.md",
-      "title": "John Doe's Project Portfolio Page",
+      "src": "team/bkjwjason.md",
+      "title": "Jason's Project Portfolio Page",
       "headings": {
-        "project-addressbook-level-3": "Project: AddressBook Level 3"
+        "project-y2direct": "Project: Y2Direct"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/blizzeracz.md",
+      "title": "Loysius's Project Portfolio Page",
+      "headings": {
+        "project-y2direct": "Project: Y2Direct"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/euchangxian.md",
+      "title": "Chang Xian's Project Portfolio Page",
+      "headings": {
+        "project-y2direct": "Project: Y2Direct"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/junnengsoo.md",
+      "title": "Jun Neng's Project Portfolio Page",
+      "headings": {
+        "project-y2direct": "Project: Y2Direct"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/wjayee.md",
+      "title": "Ja Yee's Project Portfolio Page",
+      "headings": {
+        "project-y2direct": "Project: Y2Direct"
       },
       "headingKeywords": {}
     },
