@@ -51,16 +51,15 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
-        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "addanimalcommand-implementation": "AddAnimalCommand Implementation",
+        "proposed-implementation": "Proposed Implementation",
+        "design-considerations": "Design considerations:",
+        "deleteanimalcommand-implementation": "DeleteAnimalCommand Implementation",
         "proposed-implementation-2": "Proposed Implementation",
         "design-considerations-2": "Design considerations:",
-        "deleteanimalcommand-implementation": "DeleteAnimalCommand Implementation",
+        "listanimalcommand-implementation": "ListAnimalCommand Implementation",
         "proposed-implementation-3": "Proposed Implementation",
         "design-considerations-3": "Design considerations:",
-        "listanimalcommand-implementation": "ListAnimalCommand Implementation",
-        "proposed-implementation-4": "Proposed Implementation",
-        "design-considerations-4": "Design considerations:",
         "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
@@ -118,7 +117,19 @@
         "pawfection-user-guide": "PawFection User Guide",
         "quick-start": "Quick start",
         "features": "Features",
-        "entry-management": "Entry Management",
+        "adding-an-animal-add": "Adding an animal: add",
+        "program-usage-help-help": "Program usage help: help",
+        "listing-all-animals-list": "Listing all animals: list",
+        "deleting-an-animal-delete": "Deleting an animal: delete",
+        "editing-an-animal-edit": "Editing an animal: Edit",
+        "searching-an-animal-search": "Searching an animal: Search",
+        "adds-a-task-to-an-animal-addtask": "Adds a task to an animal: addtask",
+        "deletes-a-task-of-an-animal-deletetask": "Deletes a task of an animal: deletetask",
+        "marking-a-task-as-done-mark": "Marking a task as done: mark",
+        "unmarking-a-task-as-done-unmark": "Unmarking a task as done: unmark",
+        "reset-all-tasks-reset": "Reset all tasks: reset",
+        "saving-the-data": "Saving the data",
+        "editing-the-data-file": "Editing the data file",
         "faq": "FAQ",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
@@ -129,7 +140,7 @@
       "src": "index.md",
       "title": "",
       "headings": {
-        "addressbook-level-3": "AddressBook Level-3"
+        "pawfection": "Pawfection"
       },
       "headingKeywords": {}
     },
@@ -137,7 +148,7 @@
       "src": "team/bkjwjason.md",
       "title": "Jason's Project Portfolio Page",
       "headings": {
-        "project-y2direct": "Project: Y2Direct"
+        "project-pawfection": "Project: PawFection"
       },
       "headingKeywords": {}
     },
@@ -145,7 +156,7 @@
       "src": "team/blizzeracz.md",
       "title": "Loysius's Project Portfolio Page",
       "headings": {
-        "project-y2direct": "Project: Y2Direct"
+        "project-pawfection": "Project: PawFection"
       },
       "headingKeywords": {}
     },
@@ -153,7 +164,7 @@
       "src": "team/euchangxian.md",
       "title": "Chang Xian's Project Portfolio Page",
       "headings": {
-        "project-y2direct": "Project: Y2Direct"
+        "project-pawfection": "Project: PawFection"
       },
       "headingKeywords": {}
     },
@@ -161,7 +172,7 @@
       "src": "team/junnengsoo.md",
       "title": "Jun Neng's Project Portfolio Page",
       "headings": {
-        "project-y2direct": "Project: Y2Direct"
+        "project-pawfection": "Project: PawFection"
       },
       "headingKeywords": {}
     },
@@ -169,7 +180,7 @@
       "src": "team/wjayee.md",
       "title": "Ja Yee's Project Portfolio Page",
       "headings": {
-        "project-y2direct": "Project: Y2Direct"
+        "project-pawfection": "Project: PawFection"
       },
       "headingKeywords": {}
     },
