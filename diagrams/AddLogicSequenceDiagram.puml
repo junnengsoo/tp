@@ -14,10 +14,10 @@ box AnimalModel MODEL_COLOR_T1
 participant ":AnimalModel" as AnimalModel MODEL_COLOR
 end box
 
-[-> AnimalLogicManager : execute("add /n ...")
+[-> AnimalLogicManager : execute("add n/ ...")
 activate AnimalLogicManager
 
-AnimalLogicManager -> AnimalCatalogParser : parseCommand("add /n ...")")
+AnimalLogicManager -> AnimalCatalogParser : parseCommand("add n/ ...")")
 activate AnimalCatalogParser
 
 create AddAnimalCommandParser
@@ -27,7 +27,7 @@ activate AddAnimalCommandParser
 AddAnimalCommandParser --> AnimalCatalogParser
 deactivate AddAnimalCommandParser
 
-AnimalCatalogParser -> AddAnimalCommandParser : parse("/n ...")")
+AnimalCatalogParser -> AddAnimalCommandParser : parse("n/ ...")")
 activate AddAnimalCommandParser
 
 create AddAnimalCommand
@@ -49,11 +49,7 @@ deactivate AnimalCatalogParser
 AnimalLogicManager -> AddAnimalCommand : execute(model)
 activate AddAnimalCommand
 
-AddAnimalCommand -> AnimalModel : addAnimal(animal)
-activate AnimalModel
-
-AnimalModel --> AddAnimalCommand
-deactivate AnimalModel
+ref over AddAnimalCommand, AnimalModel : add animal
 
 create CommandResult
 AddAnimalCommand -> CommandResult
